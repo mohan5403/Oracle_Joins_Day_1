@@ -57,3 +57,17 @@ and
     e.hiredate < m.hiredate;
 
 select * from (select count(*) as records_1 from emp_1) ;
+
+select * from dept_1 natural join  emp_1;   
+
+select * from emp_1 join dept_1 using(deptno);
+
+select * from emp_1 e inner join dept_1 d on e.deptno = d.deptno;
+--select * from emp_1 d inner join dept_1 e on e.deptno = d.deptno;
+
+select * from dept_1 d cross join emp_1 e where e.job ='MANAGER';
+
+select  job, deptno d from emp_1 where deptno = 10 
+union all
+--union
+select job j, deptno from emp_1 where deptno = 20 order by 2,1;
