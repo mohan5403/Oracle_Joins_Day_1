@@ -1,4 +1,6 @@
 -- Oracle_Joins_Day_1
+-- from oracle live sql 
+-- Link is https://livesql.oracle.com/
 
 select d.dname, count(d.deptno) as Count_dept from emp_1 e, dept_1 d where e.deptno = d.deptno group by d.dname;
 
