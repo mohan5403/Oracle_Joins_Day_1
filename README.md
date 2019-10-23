@@ -2,6 +2,11 @@
 -- from oracle live sql 
 -- Link is https://livesql.oracle.com/
 
+create table emp_1 as select * from scott.emp;
+
+create table dept_1 as select * from scott.dept;
+
+
 select d.dname, count(d.deptno) as Count_dept from emp_1 e, dept_1 d where e.deptno = d.deptno group by d.dname;
 
 select * from emp_1;
@@ -52,17 +57,3 @@ and
     e.hiredate < m.hiredate;
 
 select * from (select count(*) as records_1 from emp_1) ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
