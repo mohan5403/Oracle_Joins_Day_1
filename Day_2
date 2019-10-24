@@ -1,0 +1,20 @@
+select rownum  as "S.NO", e.* from scott.emp e where rownum <= 10;
+
+select sysdate,to_char(systimestamp, 'HH:MI:SS') from dual;
+
+select to_char(systimestamp, 'day') from dual;
+
+select rowid, ename from scott.emp;
+
+select * from scott.emp where rowid = 'AAATJZAAVAAAADzAAB';
+
+declare
+TYPE arr_type is table of number(10) INDEX BY BINARY_INTEGER;
+X arr_type;
+begin
+for i in 1 .. 10
+    loop
+        x(i) := i*10;
+        dbms_output.put_line(x(i));
+    end loop;
+end;
